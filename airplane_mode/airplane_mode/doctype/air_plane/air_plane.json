@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series: [naming_series]",
+ "creation": "2026-04-10 16:20:38.760822",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "airplane_section",
+  "naming_series",
+  "model",
+  "airline",
+  "capacity"
+ ],
+ "fields": [
+  {
+   "fieldname": "airplane_section",
+   "fieldtype": "Section Break",
+   "label": "Airplane"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "airline",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Airline",
+   "options": "Airline",
+   "reqd": 1
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "label": "Capacity ",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "naming_series",
+   "options": "IndiGo-.###\nAirIndia-.###\nIxigo-.###"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-11 12:01:30.181540",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Air_plane",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
