@@ -5,7 +5,9 @@ def execute():
     tickets = frappe.get_all("Airplane Ticket", fields=["name"])
 
     for ticket in tickets:
-        seat = f"{random.randint(1,99)}{random.choice(['A','B','C','D','E'])}"
+		number=random.randint(1,99)
+		choice=random.choice(['A','B','C','D','E'])
+        seat = f"{number}{choice}"
 
         frappe.db.set_value("Airplane Ticket", ticket.name, "seat", seat)
 
