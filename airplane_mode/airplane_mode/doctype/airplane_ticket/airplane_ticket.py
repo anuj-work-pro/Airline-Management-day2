@@ -37,5 +37,4 @@ class AirplaneTicket(Document):
         self.seat = f"{number}{letter}"
 
 
-    def on_submit(self):
-        self.status = "Completed"
+    
