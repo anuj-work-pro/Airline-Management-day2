@@ -4,6 +4,12 @@ import random
 import string
 
 class AirplaneTicket(Document):
+
+	def before_insert(self):
+        number = random.randint(1, 99)
+        letter = random.choice(["A", "B", "C", "D", "E"])
+        self.seat = f"{number}{letter}"
+	
     def validate(self):
         self.calculate_total()
         self.remove_duplicates()
@@ -31,10 +37,7 @@ class AirplaneTicket(Document):
         if self.status != "Boarded":
            frappe.throw("Ticket can be submitted only when status is Boarded")
 
-    def before_insert(self):
-        number = random.randint(1, 99)
-        letter = random.choice(["A", "B", "C", "D", "E"])
-        self.seat = f"{number}{letter}"
+    
 
 
     
